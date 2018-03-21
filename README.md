@@ -5,6 +5,13 @@ A simple, python script to query the MITRE ATT&amp;CK API for tactics, technique
 - Quickly align updated tactics, techniques, mitigation, and detection information from MITRE ATT&CK API for a specific threat group.
 - Brush up on my python skills and get familiar with GIT while drinking coffee
 
+# How To
+Use one of two methods for use:
+- If (python3 is installed): 
+    Download script from git & issue cmd .. python3 attackintel.py
+- Else: 
+    Cut & paste script from git into your favorite [online python emulator](https://repl.it/languages/python3)
+
 # Resources
 - [MITRE ATT&CK API](https://attack.mitre.org/wiki/Using_the_API)
 
