@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import importlib.util
+import pip
 import urllib.parse
 import requests
 from sys import exit
@@ -10,6 +12,17 @@ class attackintel():
   
   __version__ = "0.1"
   __author__  = "gr4ym4ntx"
+  
+  def check_install(self):
+    # Check for non-standard packages
+    pkgs_req = ['requests','termcolor','time']
+    for pkg in pkgs_req:
+      spec = importlib.util.find_spec(pkg)
+      if spec is None:
+        print(pkg + " is not installed \n")
+        pip.main(['install',pkg])
+        print(pkg + " is now installed \n")
+    print('Module check complete.')
   
   def get_URL(self, qry):
     # Build Encoded MITRE Query URL
@@ -169,6 +182,8 @@ class attackintel():
     return(grp_id,grpQry)
   
   def main(self):
+    self.check_install()
+    
     # Get ascii art & menu
     self.logo()
     self.menu()
