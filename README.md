@@ -10,6 +10,7 @@ A simple python script to query the MITRE ATT&amp;CK API for tactics, techniques
 Use one of two methods:
 - If (python3 is installed): 
     - Download script from git
+    - `pip3 install -r requirements.txt`
     - `python3 attackintel.py`
 - Else: 
     - Cut & paste script from git into your favorite [online python emulator](https://repl.it/languages/python3)
